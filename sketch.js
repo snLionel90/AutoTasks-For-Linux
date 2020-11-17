@@ -17,7 +17,7 @@ function setup() {
   createCanvas(400, 400);
   
   //asignamos una velocidad de fotogramas
-  frameRate(3);
+  frameRate(2);
   
   //hacemos los turnos de cada jugador y el inicio de la partida de forma aleatoria
   currentPlayer = floor(random(players.length));
@@ -129,17 +129,17 @@ function draw() {
   }
   
   //resultado de ganador o perdedor mostrado en pantalla usando una etiqueta HTML
-  let result = winCheck();
-  if (result !=null){
+  let resultao = winCheck();
+  if (resultao !=null){
     noLoop(); //se corta el flujo 
-    let resultP = createP('');
-    resultP.style('font-size','32pt'); //tamaño de letra
+    let resultGame = createP('');
+    resultGame.style('font-size','52pt'); //tamaño de letra
     
-    if (resultP =='empate'){ //si hay empate lo mustra en pantalla
-      resultP.html('Empatee');
+    if (resultGame =='empate'){ //si hay empate lo mustra en pantalla
+      resultGame.html('Empatee');
       
     }else {
-      resultP.html('${result} Ganador!');
+      resultGame.html('Ganador!');
     }
     //dksjd
   } else{
